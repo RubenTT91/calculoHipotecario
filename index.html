@@ -17,15 +17,15 @@
 
         <h2>Calculo Hipotecario</h2>
 
-        <form action="#">
+        <form action="#" id="form">
             <div class="contenedor_label">
                 <label for="cuotaIni">Cuota Inicial</label>
-                <input type="number" name="cuotaIni" id="cuotaIni" required="true">
+                <input type="number" name="cuotaIni" id="cuotaIni" required="true" min="0" max="999">
             </div>
 
             <div class="contenedor_label">
                 <label for="tasaInte">Tasa Interes </label>
-                <input type="number" name="tasaInte" id="tasaInte" required="true">
+                <input type="number" name="tasaInte" id="tasaInte" required="true" min="0" max="10" step="0,1">
             </div>
 
             <div class="contenedor_label">
@@ -34,7 +34,7 @@
             </div>
             <div class="contenedor_label">
                 <label for="tasaInte">Plazo en Años </label>
-                <input type="number" name="tasaInte" id="tasaInte" maxlength="3" required="true">
+                <input type="number" name="plazoAnos" id="plazoAnos" maxlength="3" required="true" min="0" max="999">
             </div>
             <button id="Calcular">Calcular</button>
             <button id="limpiar">Limpiar</button>
