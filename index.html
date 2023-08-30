@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css">
+    <title>Calcular Crédito Hipotecario</title>
+
+</head>
+
+<body>
+
+    <h1>Nombre_empresa</h1>
+
+    <section id="formulario">
+
+        <h2>Calculo Hipotecario</h2>
+
+        <form action="#">
+            <div class="contenedor_label">
+                <label for="cuotaIni">Cuota Inicial</label>
+                <input type="number" name="cuotaIni" id="cuotaIni" required="true">
+            </div>
+
+            <div class="contenedor_label">
+                <label for="tasaInte">Tasa Interes </label>
+                <input type="number" name="tasaInte" id="tasaInte" required="true">
+            </div>
+
+            <div class="contenedor_label">
+                <label for="totalCasa">Valor total Casa</label>
+                <input type="number" name="totalCasa" id="totalCasa" required="true">
+            </div>
+            <div class="contenedor_label">
+                <label for="tasaInte">Plazo en Años </label>
+                <input type="number" name="tasaInte" id="tasaInte" maxlength="3" required="true">
+            </div>
+            <button id="Calcular">Calcular</button>
+            <button id="limpiar">Limpiar</button>
+        </form>
+    </section>
+
+    <section id="resultado">
+        <h2>Total Prestamo</h2>
+        <div class="contenedor_label">
+            <label for="">Total Prestamo</label>
+            <output type="text" name="totalPrestamo" id="totalPrestamo" disabled="true" value="XXXXXX">
+        </div>
+        <div class="contenedor_label">
+            <label for="valorCuotaM">Valor Cuota Mensual</label>
+            <output type="text" name="valorCuotaM" id="valorCuotaM" disabled="true">
+        </div>
+    </section>
+
+<script src="src/app.js"></script>
+</body>
+
+</html>
