@@ -5,16 +5,37 @@
  * 
  * 
  */
- 
-const forma = document.getElementById['forma'];
-let totalIni = forma['cuotaIni'];
-let tasaInteres = forma['tasaInte'];
-let totalCasa = forma['tasa']
 
+function calcular() {
+    debugger;
+  const FORMULARIO = document.forms["formulario"];
 
+  let cuotaInicial = FORMULARIO["cuotaIni"].value;
+  let tasaInteres = FORMULARIO["tasaInte"].value;
+  let totalCasa = FORMULARIO["totalCasa"].value;
+  let plazoAnos = FORMULARIO["plazoAnos"].value;
+  let montoPrestamo;
+  let totalIntereses;
+  let cuota;
 
-function calcular(){
-    
-    if()
+  console.log(tasaInteres);
 
+  if (
+    cuotaInicial < 0 ||
+    tasaInteres < 0 ||
+    totalCasa < 0 ||
+    plazoAnos < 0
+  ) {    alert("Todos los valores deben ser superiores a 0");   }
+  else{
+
+    montoPrestamo = totalCasa - cuotaInicial;
+    totalIntereses = montoPrestamo * (tasaInteres/100);
+    cuota = (montoPrestamo + totalIntereses) / plazoAnos*12
+    mostrarDatos();
+  }
+
+  function mostrarDatos(){
+    document.getElementById('totalPrestamo').innerHTML = `$ ${montoPrestamo}`;
+    document.getElementById('valorCuotaM').innerHTML = `$ ${cuota}`
+  }
 }
